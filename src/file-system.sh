@@ -4,6 +4,7 @@
 
 # File system structure
 
+mkdir -pv /{usr,etc,var}
 mkdir -pv /{boot,home,mnt,opt,srv}
 
 mkdir -pv /etc/{opt,sysconfig}
@@ -15,6 +16,10 @@ mkdir -pv /usr/{,local/}share/{misc,terminfo,zoneinfo}
 mkdir -pv /usr/{,local/}share/man/man{1..8}
 mkdir -pv /var/{cache,local,log,mail,opt,spool}
 mkdir -pv /var/lib/{color,misc,locate}
+
+ln -svf usr/bin /bin
+ln -sfv usr/lib /lib
+ln -svf usr/sbin /sbin
 
 ln -sfv /run /var/run
 ln -sfv /run/lock /var/lock
