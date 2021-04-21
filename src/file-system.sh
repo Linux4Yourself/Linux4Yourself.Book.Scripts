@@ -10,7 +10,7 @@ mkdir -pv /{boot,home,mnt,opt,srv}
 mkdir -pv /etc/{opt,sysconfig}
 mkdir -pv /lib/firmware
 mkdir -pv /media/{floppy,cdrom}
-mkdir -pv /usr/{,local/}{bin,include,lib,sbin,src}
+mkdir -pv /usr/{,local/}{bin,include,lib,sbin,src,lib32}
 mkdir -pv /usr/{,local/}share/{color,dict,doc,info,locale,man}
 mkdir -pv /usr/{,local/}share/{misc,terminfo,zoneinfo}
 mkdir -pv /usr/{,local/}share/man/man{1..8}
@@ -20,6 +20,7 @@ mkdir -pv /var/lib/{color,misc,locate}
 ln -sfv usr/bin /bin
 ln -sfv usr/lib /lib
 ln -sfv usr/sbin /sbin
+ln -sfv usr/lib32 /lib32
 
 ln -sfv /run /var/run
 ln -sfv /run/lock /var/lock
