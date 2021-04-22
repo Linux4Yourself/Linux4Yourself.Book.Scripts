@@ -1,9 +1,3 @@
-#!/bin/bash
-
-# see more https://refspecs.linuxfoundation.org/FHS_3.0/fhs-3.0.html
-
-# File system structure
-
 mkdir -pv /{usr,etc,var}
 mkdir -pv /{boot,home,mnt,opt,srv}
 
