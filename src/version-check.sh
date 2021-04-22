@@ -1,3 +1,5 @@
+cat > version-check.sh << "EOF"
+
 #!/bin/bash
 # Simple script to list version numbers of critical development tools
 export LC_ALL=C
@@ -53,3 +55,7 @@ if [ -x dummy ]
   then echo "g++ compilation OK";
   else echo "g++ compilation failed"; fi
 rm -f dummy.c dummy
+
+EOF
+
+bash version-check.sh
