@@ -1,29 +1,22 @@
-#!/bin/bash
+mkdir -pv $LIN/{usr,etc,var}
+mkdir -pv $LIN/{boot,home,mnt,opt,srv}
 
-# see more https://refspecs.linuxfoundation.org/FHS_3.0/fhs-3.0.html
+mkdir -pv $LIN/etc/{opt,sysconfig}
+mkdir -pv $LIN/lib/firmware
+mkdir -pv $LIN/media/{floppy,cdrom}
+mkdir -pv $LIN/usr/{,local/}{bin,include,lib,sbin,src}
+mkdir -pv $LIN/usr/{,local/}share/{color,dict,doc,info,locale,man}
+mkdir -pv $LIN/usr/{,local/}share/{misc,terminfo,zoneinfo}
+mkdir -pv $LIN/usr/{,local/}share/man/man{1..8}
+mkdir -pv $LIN/var/{cache,local,log,mail,opt,spool}
+mkdir -pv $LIN/var/lib/{color,misc,locate}
 
-# File system structure
+ln -sfv usr/bin $LIN/bin
+ln -sfv usr/lib $LIN/lib
+ln -sfv usr/sbin $LIN/sbin
 
-mkdir -pv /{usr,etc,var}
-mkdir -pv /{boot,home,mnt,opt,srv}
+ln -sfv /run $LIN/var/run
+ln -sfv /run/lock $LIN/var/lock
 
-mkdir -pv /etc/{opt,sysconfig}
-mkdir -pv /lib/firmware
-mkdir -pv /media/{floppy,cdrom}
-mkdir -pv /usr/{,local/}{bin,include,lib,sbin,src,lib32}
-mkdir -pv /usr/{,local/}share/{color,dict,doc,info,locale,man}
-mkdir -pv /usr/{,local/}share/{misc,terminfo,zoneinfo}
-mkdir -pv /usr/{,local/}share/man/man{1..8}
-mkdir -pv /var/{cache,local,log,mail,opt,spool}
-mkdir -pv /var/lib/{color,misc,locate}
-
-ln -sfv usr/bin /bin
-ln -sfv usr/lib /lib
-ln -sfv usr/sbin /sbin
-ln -sfv usr/lib32 /lib32
-
-ln -sfv /run /var/run
-ln -sfv /run/lock /var/lock
-
-install -dv -m 0750 /root
-install -dv -m 1777 /tmp /var/tmp
+install -dv -m 0750 $LIN/root
+install -dv -m 1777 $LIN/tmp $LIN/var/tmp
