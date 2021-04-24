@@ -1,5 +1,6 @@
 mkdir -pv $LIN/{usr,etc,var}
 mkdir -pv $LIN/{boot,home,mnt,opt,srv}
+mkdir -pv $LIN/usr/{,local/}{bin,include,lib,sbin,src}
 
 ln -sfv usr/bin $LIN/bin
 ln -sfv usr/lib $LIN/lib
@@ -8,7 +9,6 @@ ln -sfv usr/sbin $LIN/sbin
 mkdir -pv $LIN/etc/{opt,sysconfig}
 mkdir -pv $LIN/lib/firmware
 mkdir -pv $LIN/media/{floppy,cdrom}
-mkdir -pv $LIN/usr/{,local/}{bin,include,lib,sbin,src}
 mkdir -pv $LIN/usr/{,local/}share/{color,dict,doc,info,locale,man}
 mkdir -pv $LIN/usr/{,local/}share/{misc,terminfo,zoneinfo}
 mkdir -pv $LIN/usr/{,local/}share/man/man{1..8}
