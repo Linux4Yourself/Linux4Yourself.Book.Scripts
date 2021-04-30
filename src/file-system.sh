@@ -1,4 +1,4 @@
-mkdir -pv $LIN/{usr,etc,var}
+mkdir -pv $LIN/{usr,etc,var,lib64}
 mkdir -pv $LIN/{boot,home,mnt,opt,srv}
 mkdir -pv $LIN/usr/{,local/}{bin,include,lib,sbin,src}
 
