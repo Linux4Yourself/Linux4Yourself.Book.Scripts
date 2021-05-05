@@ -1,6 +1,7 @@
 mkdir -pv $LIN/{usr,etc,var,lib64}
 mkdir -pv $LIN/{boot,home,mnt,opt,srv}
 mkdir -pv $LIN/usr/{,local/}{bin,include,lib,sbin,src}
+mkdir -pv $LFS/{dev,proc,sys,run}
 
 ln -sfv usr/bin $LIN/bin
 ln -sfv usr/lib $LIN/lib
