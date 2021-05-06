@@ -48,4 +48,3 @@ fi
 
 # End ~/.bashrc
 EOF
-dircolors -p > /etc/dircolors
