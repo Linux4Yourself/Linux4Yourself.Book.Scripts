@@ -77,6 +77,9 @@ unset script RED GREEN NORMAL
 export CFLALGS="-O3 -s"
 export CXXFLALGS="-O3 -s"
 
+# makeflags for paralell make
+export MAKEFLAGS=-j$(lscpu  | grep "CPU(s):" | grep -v NUMA | tr -d "CPU(s):                          ")
+
 # End /etc/profile
 EOF
 install --directory --mode=0755 --owner=root --group=root /etc/profile.d
