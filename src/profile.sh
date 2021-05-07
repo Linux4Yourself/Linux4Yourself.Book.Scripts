@@ -74,8 +74,8 @@ unset script RED GREEN NORMAL
 
 # CFLAGS and CXXFLAGS for optimization (if you want - add -march=native)
 
-export CFLALGS="-O3 -s"
-export CXXFLALGS="-O3 -s"
+export CFLAGS="-O3 -s"
+export CXXFLAGS="-O3 -s"
 
 # End /etc/profile
 EOF
