@@ -14,7 +14,7 @@ WDIR=/tmp/lx4uiso
 ISOLINUXDIR=$CWD/livecd/isolinux
 DISTRONAME="Lx4u"
 LABEL=Lx4uLiveCD
-LIN_ROOT=/mnt/lin
+LIN_ROOT=$LIN
 OUTPUT=Lx4u-$LIN_VER-livecd.iso
 
 isolinux_files="chain.c32 isolinux.bin ldlinux.c32 libutil.c32 reboot.c32 menu.c32
